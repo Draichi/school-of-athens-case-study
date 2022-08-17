@@ -24,7 +24,8 @@ const secondSectionTimeline = gsap.timeline({
   },
 });
 
-secondSectionTimeline.fromTo(".headline>h1", { y: -20 }, { y: 0 });
+secondSectionTimeline.fromTo(".headline", { y: -20 }, { y: 0 });
+secondSectionTimeline.fromTo(".left-text", { y: -50 }, { y: 0 }, "<");
 secondSectionTimeline.fromTo(
   "img.background-art",
   {
@@ -46,4 +47,11 @@ secondSectionTimeline.fromTo(
     x: -400,
   },
   "<50%"
+);
+secondSectionTimeline.to(
+  ".left-text",
+  {
+    opacity: 0,
+  },
+  "<"
 );
